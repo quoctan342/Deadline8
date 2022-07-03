@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/267bd23fe0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="app" id="app">
+        <modal>
+            <template slot="modal-header">
+                <h2 class="modal__title">Add product</h2>
+            </template>
+            <template slot="modal-body">
+                <div class="flex--group-row flex--gap-15">
+                    <input-search v-on:receivekeyword="handleSearch" class="flex--fill-row" placeholder="Search product by name, tag, id..."></input-search>
+                    <select-comp v-on:receivevaluesort="handleSort"></select-comp>
+                </div>
+                <list-product v-on:sendproductsselected="receiveProductsSelected" :product_render="this.productRender" :products="this.productsHandled"/>
+            </template>
+            <template slot="modal-footer">
+                <div class="flex--group-row flex--gap-26">
+                    <button @click="prevPage" class="btn text--small text--weight-normal flex--gap-20" :class="{ 'text--gray': disablePrevButton }">
+                        <img src="./assets/img/icon/prev.svg" alt="Prev">
+                        Prev
+                    </button>
+                    <button @click="nextPage" class="btn text--small text--weight-normal flex--gap-20" :class="{ 'text--gray': disableNextButton }">
+                        Next
+                        <img src="./assets/img/icon/next.svg" alt="Next">
+                    </button>
+                </div>
+                <div class="flex--group-row flex--gap-15">
+                    <button class="btn text--small text--weight-normal w-104">
+                        Cancel
+                    </button>
+                    <button @click="handleSave" class="btn btn--danger text--small text--weight-normal w-104">
+                        Save
+                    </button>
+                </div>
+            </template>
+        </modal>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./assets/js/Components/Modal.js"></script>
+    <script src="./assets/js/Components/InputSearch.js"></script>
+    <script src="./assets/js/Components/ButtonSort.js"></script>
+    <script src="./assets/js/Components/ListProduct.js"></script>
+    <script src="./assets/js/Components/SelectComp.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

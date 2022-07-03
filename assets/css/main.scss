@@ -1,0 +1,259 @@
+* {
+    font-family: 'Inter';
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    max-width: 640px;
+    width: 100%;
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
+
+    &__header {
+        padding: 32px 24px;
+    }
+
+    &__body {
+        padding: 0 24px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    &__footer {
+        padding: 18px 24px;
+        box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.04);
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.input {
+
+    &__search { 
+        border: 1px solid red;
+        color: #8F90A6;
+        border: 1px solid #EBEBF0;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 8px;
+
+        &-value {
+            border: none;
+            width: 100%;
+        }
+
+        &-value {outline: none;}
+
+        
+    }
+    &__checkbox {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+
+    }
+}
+
+.btn {
+    padding: 8px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid #EBEBF0;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &--gray {
+        color: #8F90A6;
+        background: #FAFAFC;
+    }
+
+    &--danger {
+        background: #F65E5D;
+        color: #ffffff;
+    }
+}
+
+.flex {
+    
+    &--gap-15 {
+        gap: 15px;
+    }
+
+    &--gap-26 {
+        gap: 26px;
+    }
+
+    &--gap-20 {
+        gap: 20px;
+    }
+
+    &--group-row {
+        display: flex;
+    }
+
+    &--fill-row {
+        flex: 1;
+    }
+}
+
+.content {
+
+    &--strong-light {
+        color: #1C1C28;
+    }
+}
+
+.list {
+    width: 100%;
+    
+    &__header {
+        display: flex;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        border-bottom: 1px solid #EBEBF0;
+        align-items: center;
+    }
+
+    &__head-important {
+        flex: 1;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        max-height: 498px;
+        height: 100%;
+        overflow-y: auto;
+        padding-right: 5px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #EBEBF0;
+        padding: 21px 0 15px 0;
+    }
+
+    &__item-important {
+        flex: 1;
+    }
+
+    &__data {
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
+
+    &__image {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__content {
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        width: 390px; 
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba($color: #F65E5D, $alpha: 0.3);
+    mix-blend-mode: normal;
+    border-radius: 2px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #F65E5D;
+    border-radius: 2px;  }
+  
+.text {
+
+    &--weight-normal {
+        font-weight: 500;
+    }
+
+    &--small {
+        font-size: 12px;
+    }
+
+    &--gray {
+        color: #8F90A6;
+    }
+
+    &--normal {
+        font-size: 14px;
+    }
+}
+
+.w-104 {
+    width: 104px;
+}
+
+.custom-select {
+    position: relative;
+    display: block;
+    border: 1px solid #EBEBF0;
+    border-radius: 3px;
+    background-color: #FAFAFC;
+    z-index: 10;
+    &:before {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: 'Sort: ';
+        z-index: -1;
+        font-size: 14px;
+        color:#8F90A6;
+    }
+    &:after {
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: url(../img/icon/sort.svg);
+        z-index: -1;
+    }
+}
+
+.select__input {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    padding: 9px 38px 8px 49px;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+}
+   
+  
+  
