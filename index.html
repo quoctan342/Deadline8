@@ -14,45 +14,17 @@
 <body>
    
     <div class="app" id="app">
-        <modal>
-            <template slot="modal-header">
-                <h2 class="modal__title">Add product</h2>
-            </template>
-            <template slot="modal-body">
-                <div class="flex--group-row flex--gap-15">
-                    <input-search v-on:receivekeyword="handleSearch" class="flex--fill-row" placeholder="Search product by name, tag, id..."></input-search>
-                    <select-comp v-on:receivevaluesort="handleSort"></select-comp>
-                </div>
-                <list-product v-on:sendproductsselected="receiveProductsSelected" :product_render="this.productRender" :products="this.productsHandled"/>
-            </template>
-            <template slot="modal-footer">
-                <div class="flex--group-row flex--gap-26">
-                    <button @click="prevPage" class="btn text--small text--weight-normal flex--gap-20" :class="{ 'text--gray': disablePrevButton }">
-                        <img src="./assets/img/icon/prev.svg" alt="Prev">
-                        Prev
-                    </button>
-                    <button @click="nextPage" class="btn text--small text--weight-normal flex--gap-20" :class="{ 'text--gray': disableNextButton }">
-                        Next
-                        <img src="./assets/img/icon/next.svg" alt="Next">
-                    </button>
-                </div>
-                <div class="flex--group-row flex--gap-15">
-                    <button class="btn text--small text--weight-normal w-104">
-                        Cancel
-                    </button>
-                    <button @click="handleSave" class="btn btn--danger text--small text--weight-normal w-104">
-                        Save
-                    </button>
-                </div>
-            </template>
-        </modal>
+        <modal-product></modal-product>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./assets/js/Components/Modal.js"></script>
     <script src="./assets/js/Components/InputSearch.js"></script>
     <script src="./assets/js/Components/ButtonSort.js"></script>
-    <script src="./assets/js/Components/ListProduct.js"></script>
+    <script src="./assets/js/Components/List.js"></script>
+    <script src="./assets/js/Components/ItemList.js"></script>
     <script src="./assets/js/Components/SelectComp.js"></script>
+    <script src="./assets/js/Components/ModalProduct.js"></script>
+    <script src="./assets/js/Components/Pagination.js"></script>
     <script src="./assets/js/main.js"></script>
 
 </body>

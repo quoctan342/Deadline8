@@ -7,7 +7,7 @@ Vue.component('input-search', {
     },
     watch: {
         keywordSearch() {
-            this.$emit('receivekeyword', this.keywordSearch);
+            this.$emit('input', this.keywordSearch);
         }
     },
     template: 
